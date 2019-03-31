@@ -1,0 +1,24 @@
+{
+  "name": "cannon-ball-api",
+  "version": "0.1.0",
+  "description": "Connection broker for Cannon Ball",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camilo86/CannonBall.git"
+  },
+  "keywords": [
+    "cannon",
+    "ball",
+    "cannon-ball"
+  ],
+  "author": "Camilo Gonzalez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/camilo86/CannonBall/issues"
+  },
+  "homepage": "https://github.com/camilo86/CannonBall#readme"
+}
