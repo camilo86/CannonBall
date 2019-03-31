@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { Pane } from 'evergreen-ui';
 
 import Navbar from '../../components/Navbar';
@@ -23,4 +24,13 @@ class HomePage extends Component {
 
 HomePage.propTypes = {};
 
-export default HomePage;
+const mapStateToProps = state => ({
+  ...state,
+});
+
+const mapDispatchToProps = dispatch => ({ dispatch });
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(HomePage);
