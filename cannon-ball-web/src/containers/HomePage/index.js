@@ -3,6 +3,7 @@ import { Pane } from 'evergreen-ui';
 
 import Navbar from '../../components/Navbar';
 import FileChooser from '../../components/FileChooser';
+import HowItWorks from '../../components/HowItWorks';
 
 class HomePage extends Component {
   render() {
@@ -10,6 +11,7 @@ class HomePage extends Component {
       <Pane>
         <Navbar />
         <FileChooser />
+        <HowItWorks />
       </Pane>
     );
   }
