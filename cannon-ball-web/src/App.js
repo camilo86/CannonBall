@@ -1,11 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-class App extends Component {
-  render() {
-    return (
-      <h1>Cannon Ball</h1>
-    );
-  }
-}
+import HomePage from './containers/HomePage';
+import NotFoundPage from './containers/NotFoundPage';
+
+import 'normalize.css';
+
+const App = () => (
+  <BrowserRouter>
+    <Switch>
+      <Route exact path="/" component={HomePage} />
+      <Route component={NotFoundPage} />
+    </Switch>
+  </BrowserRouter>
+)
 
 export default App;
