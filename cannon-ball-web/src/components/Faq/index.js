@@ -13,7 +13,7 @@ class Faq extends Component {
   render() {
     return (
       <Pane width="100%" paddingTop={32} paddingBottom={32} paddingLeft={120} paddingRight={120} background="#F7F9FD">
-        <Heading size={800} paddingBottom={32} textAlign="center">Frequently Asked Questions</Heading>
+        <Heading size={800} paddingBottom={32} textAlign="center" color="#007489">Frequently Asked Questions</Heading>
         <Accordion preExpanded={this.state.activeQuestions} allowMultipleExpanded onChange={this.handleSelectQuestion} style={{marginLeft: 24, marginRight: 24 }}>
           {faq.map(x => (
             <AccordionItem key={x.key} uuid={x.key}>
