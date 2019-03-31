@@ -1,7 +1,7 @@
 export default [
   {
     key: 'question-1',
-    question: 'How is Cannon Ball different from any other file storage application?',
+    question: 'How is Cannon Ball different from any other file sharing application?',
     answer: 'Unlike most of the applications out there, Cannon Ball does not store your file at all. We assist your browser do a handshake with the recipients\' browser. Your files are sent directly to the recipient. If you are curious, the Github repo goes more into detail about how Cannon Ball achieves this https://github.com/camilo86/CannonBall',
   },
   {

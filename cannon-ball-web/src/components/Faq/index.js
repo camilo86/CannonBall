@@ -4,22 +4,22 @@ import { Accordion, AccordionItem, AccordionItemHeading, AccordionItemButton, Ac
 import faq from './faq';
 
 class Faq extends Component {
-  state = { activeQuestion: 'question-1' };
+  state = { activeQuestions: ['question-1'] };
 
   handleSelectQuestion = activeQuestions => {
-    this.setState(prevState => ({ ...prevState, activeQuestion: activeQuestions[0] }));
+    this.setState(prevState => ({ ...prevState, activeQuestions: activeQuestions }));
   }
 
   render() {
     return (
       <Pane width="100%" paddingTop={32} paddingBottom={32} paddingLeft={120} paddingRight={120} background="#F7F9FD">
         <Heading size={800} paddingBottom={32} textAlign="center">Frequently Asked Questions</Heading>
-        <Accordion preExpanded={[this.state.activeQuestion]} onChange={this.handleSelectQuestion} style={{marginLeft: 24, marginRight: 24 }}>
+        <Accordion preExpanded={this.state.activeQuestions} allowMultipleExpanded onChange={this.handleSelectQuestion} style={{marginLeft: 24, marginRight: 24 }}>
           {faq.map(x => (
             <AccordionItem key={x.key} uuid={x.key}>
               <AccordionItemHeading>
                   <AccordionItemButton>
-                      <Heading size={600} paddingBottom={4}><Icon icon={this.state.activeQuestion === x.key ? "caret-down" : "caret-right"} />{x.question}</Heading>
+                      <Heading size={600} paddingBottom={4}><Icon icon={this.state.activeQuestions.indexOf(x.key) !== -1 ? "caret-down" : "caret-right"} />{x.question}</Heading>
                   </AccordionItemButton>
               </AccordionItemHeading>
               <AccordionItemPanel>
