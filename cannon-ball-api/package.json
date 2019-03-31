@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/camilo86/CannonBall/issues"
   },
-  "homepage": "https://github.com/camilo86/CannonBall#readme"
+  "homepage": "https://github.com/camilo86/CannonBall#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "peer": "^0.2.10"
+  }
 }
