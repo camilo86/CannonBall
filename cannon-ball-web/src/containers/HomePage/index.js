@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
+import { Pane } from 'evergreen-ui';
 
 import Navbar from '../../components/Navbar';
+import FileChooser from '../../components/FileChooser';
 
 class HomePage extends Component {
   render() {
     return (
-      <Navbar />
+      <Pane>
+        <Navbar />
+        <FileChooser />
+      </Pane>
     );
   }
 }
