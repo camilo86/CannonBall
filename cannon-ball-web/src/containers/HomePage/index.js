@@ -5,6 +5,7 @@ import Navbar from '../../components/Navbar';
 import FileChooser from '../../components/FileChooser';
 import HowItWorks from '../../components/HowItWorks';
 import Faq from '../../components/Faq';
+import Footer from '../../components/Footer';
 
 class HomePage extends Component {
   render() {
@@ -14,6 +15,7 @@ class HomePage extends Component {
         <FileChooser />
         <HowItWorks />
         <Faq />
+        <Footer />
       </Pane>
     );
   }
