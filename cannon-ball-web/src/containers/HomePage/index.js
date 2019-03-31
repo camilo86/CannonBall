@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 
+import Navbar from '../../components/Navbar';
+
 class HomePage extends Component {
   render() {
     return (
-      <h1>Hello CannonBall</h1>
+      <Navbar />
     );
   }
 }
