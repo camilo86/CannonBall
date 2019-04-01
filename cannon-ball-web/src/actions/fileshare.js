@@ -1,25 +1,50 @@
 import {
-  GET_FILESHARE_ID,
-  GET_FILESHARE_ID_SUCCEDED,
-  GET_FILESHARE_ID_FAILED
+  ENCODE_FILESHARE_ID,
+  ENCODE_FILESHARE_ID_SUCCEDED,
+  ENCODE_FILESHARE_ID_FAILED,
+  DECODE_FILESHARE_ID,
+  DECODE_FILESHARE_ID_SUCCEDED,
+  DECODE_FILESHARE_ID_FAILED
 } from '../constants/fileshare';
 
-export function getFileshareId() {
+export function encodeFileshareId(id) {
   return {
-    type: GET_FILESHARE_ID,
-  };
-}
-
-export function getFileshareIDSucceded(id) {
-  return {
-    type: GET_FILESHARE_ID_SUCCEDED,
+    type: ENCODE_FILESHARE_ID,
     id,
   };
 }
 
-export function getFileshareIdFailed(error) {
+export function encodeFileshareIdSucceded(fileshareId) {
   return {
-    type: GET_FILESHARE_ID_FAILED,
+    type: ENCODE_FILESHARE_ID_SUCCEDED,
+    fileshareId,
+  };
+}
+
+export function encodeFileshareIdFailed(error) {
+  return {
+    type: ENCODE_FILESHARE_ID_FAILED,
+    error,
+  };
+}
+
+export function decodeFileshareId(fileshareId) {
+  return {
+    type: DECODE_FILESHARE_ID,
+    fileshareId,
+  };
+}
+
+export function decodeFileshareIdSucceded(remoteId) {
+  return {
+    type: DECODE_FILESHARE_ID_SUCCEDED,
+    remoteId,
+  };
+}
+
+export function decodeFileshareIdFailed(error) {
+  return {
+    type: DECODE_FILESHARE_ID_FAILED,
     error,
   };
 }

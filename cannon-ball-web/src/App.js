@@ -5,6 +5,7 @@ import store from './store';
 import P2P from './services/p2p';
 
 import HomePage from './containers/HomePage';
+import FilesharePage from './containers/FilesharePage';
 import NotFoundPage from './containers/NotFoundPage';
 
 import 'normalize.css';
@@ -17,6 +18,7 @@ const App = () => (
     <BrowserRouter>
       <Switch>
         <Route exact path="/" component={HomePage} />
+        <Route path="/fileshare/:fileshareId" component={FilesharePage} />
         <Route component={NotFoundPage} />
       </Switch>
     </BrowserRouter>
